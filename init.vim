@@ -2,20 +2,28 @@ call plug#begin("~/.vim/plugins")
 Plug 'tomasr/molokai'
 Plug 'jnurmine/zenburn'
 Plug 'scrooloose/nerdtree'
+Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'pangloss/vim-javascript'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
-
-"""""""""""
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+let g:coc_disable_startup_warning = 1
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let g:prettier#autoformat = 1
+""""""""""""
 " colors
 if (has("termguicolors"))
 	set termguicolors
 endif
 syntax enable
 
+let g:gruvbox_contrast_dark='hard'
 set background=dark
-colorscheme molokai
+colorscheme molokai 
 
 """""""""""
 " use alt+hjkl to move between split/vsplit panels
@@ -48,4 +56,6 @@ let g:fzf_action = {
   \}
 
 """""""""""
-
+:set tabstop=2
+:set shiftwidth=2
+:set expandtab
