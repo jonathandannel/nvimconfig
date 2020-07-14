@@ -8,15 +8,17 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
-Plug 'sainnhe/sonokai'
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdcommenter'
-Plug 'matveyt/vim-modest'
-Plug 'ntk148v/vim-horizon'
-Plug 'Alvarocz/vim-northpole'
-Plug 'wolf-dog/nighted.vim'
+Plug 'tpope/vim-surround'
+"""" Themes
 Plug 'abnt713/vim-hashpunk'
-Plug 'HenryNewcomer/vim-theme-papaya'
+Plug 'sainnhe/sonokai'
+Plug 'noahfrederick/vim-hemisu'
+Plug 'reedes/vim-colors-pencil'
+Plug 'lxmzhv/vim'
+Plug 'carlson-erik/wolfpack'
+Plug 'gregsexton/Muon'
 call plug#end()
 
 """ Set some plugin specific globals 
@@ -30,8 +32,7 @@ let g:prettier#autoformat = 1
 syntax enable
 set termguicolors
 set background=dark
-colorscheme hashpunk
-"""
+colorscheme elda
 
 """ Use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
