@@ -32,7 +32,7 @@ let g:prettier#autoformat = 1
 syntax enable
 set termguicolors
 set background=dark
-colorscheme elda
+colorscheme pencil
 
 """ Use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
